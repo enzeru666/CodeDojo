@@ -1,0 +1,13 @@
+C:\Coding\Repos\EverCraft\EverCraft\bin\Debug\netcoreapp3.1\EverCraft.exe
+C:\Coding\Repos\EverCraft\EverCraft\bin\Debug\netcoreapp3.1\EverCraft.deps.json
+C:\Coding\Repos\EverCraft\EverCraft\bin\Debug\netcoreapp3.1\EverCraft.runtimeconfig.json
+C:\Coding\Repos\EverCraft\EverCraft\bin\Debug\netcoreapp3.1\EverCraft.runtimeconfig.dev.json
+C:\Coding\Repos\EverCraft\EverCraft\bin\Debug\netcoreapp3.1\EverCraft.dll
+C:\Coding\Repos\EverCraft\EverCraft\bin\Debug\netcoreapp3.1\EverCraft.pdb
+C:\Coding\Repos\EverCraft\EverCraft\obj\Debug\netcoreapp3.1\EverCraft.csprojAssemblyReference.cache
+C:\Coding\Repos\EverCraft\EverCraft\obj\Debug\netcoreapp3.1\EverCraft.AssemblyInfoInputs.cache
+C:\Coding\Repos\EverCraft\EverCraft\obj\Debug\netcoreapp3.1\EverCraft.AssemblyInfo.cs
+C:\Coding\Repos\EverCraft\EverCraft\obj\Debug\netcoreapp3.1\EverCraft.csproj.CoreCompileInputs.cache
+C:\Coding\Repos\EverCraft\EverCraft\obj\Debug\netcoreapp3.1\EverCraft.dll
+C:\Coding\Repos\EverCraft\EverCraft\obj\Debug\netcoreapp3.1\EverCraft.pdb
+C:\Coding\Repos\EverCraft\EverCraft\obj\Debug\netcoreapp3.1\EverCraft.genruntimeconfig.cache
