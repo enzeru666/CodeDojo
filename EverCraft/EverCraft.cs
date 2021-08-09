@@ -8,8 +8,9 @@ namespace EverCraft
         {
             Character character = new Character();
 
-            Console.WriteLine(character.hitPoints);
-            Console.WriteLine(character.armorClass);
+            Console.WriteLine($"My HP: "+character.hitPoints);
+            Console.WriteLine($"My AC: "+character.armorClass);
+            Console.ReadLine();
         }
     }
 }
