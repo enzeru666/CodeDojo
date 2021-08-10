@@ -389,3 +389,4 @@ FodyWeavers.xsd
 .idea/
 *.sln.iml
 .vs/EverCraft/v16/.suo
+.vs/EverCraft/DesignTimeBuild/.dtbcache.v2
