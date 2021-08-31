@@ -9,13 +9,29 @@ namespace EverTests
         [TestMethod]
         public void IfAttackRollIsHigherThanArmorClassTheAttackIsSuccessful()
         {
-            var actions = new Actions();
-            actions.Attack();
+            var attackSuccess = false;
 
-            var enemy = new Enemy();
+            CombatArena.Attack();
+            if (CombatArena.AttackHit)
+            {
+                attackSuccess = true;
+            }
 
-            bool attackSuccess = actions.Result > enemy.armorClass;
+            Assert.IsTrue(attackSuccess);
 
+        }
+
+        [TestMethod]
+        public void OrcsHaveHigherArmorClassThanOgres()
+        {
+            var attackSuccess = false;
+            Enemy.SpawnOrc();
+
+            CombatArena.Attack();
+            if (Enemy.SpawnOrc()
+            {
+                attackSuccess = true;
+            }
             Assert.IsTrue(attackSuccess);
 
         }

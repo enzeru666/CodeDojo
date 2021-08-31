@@ -1,23 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace EverCraft
 {
-    class Enemy
+    interface IEnemy
     {
-        public int hitPoints = 3;
-        public int armorClass = 11;
-
-        public string Name
-        { get; set; }
-
-        public static void SpawnOgre()
-        {
-            var enemy = new Enemy();
-            enemy.Name = "Ogre";
-            enemy.hitPoints = 6;
-            enemy.armorClass = 8;
-        }
+        int HitPoints { get; set; }
+        int ArmorClass { get; set; }
+        string Name { get; set; }
     }
-}
+
+    class Ogre : IEnemy
+    {
+    }

@@ -8,11 +8,6 @@ namespace EverCraft
     public class Actions
     {
         public int Result { get; set; }
-        public void Attack()
-        {
-            SkillCheck();
-            var attackRoll = Result;
-        }
 
         public void SkillCheck()
         {

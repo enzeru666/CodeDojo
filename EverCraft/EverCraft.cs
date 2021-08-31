@@ -25,9 +25,8 @@ namespace EverCraft
                 string result = Console.ReadLine();
                 if (result == "1")
                 {
-                    var combat = true;
+                    //var arena = CombatArena()
 
-                    Enemy.SpawnOgre();
                     Console.WriteLine("You face a "+enemy.Name+"! It will surely destroy you");
                     Console.ReadLine();
 
