@@ -9,14 +9,38 @@ namespace EverTests
         [TestMethod]
         public void IfAttackRollIsHigherThanArmorClassTheAttackIsSuccessful()
         {
-            var actions = new Actions();
-            actions.Attack();
+            var defender = new Character("Defender");
+            var diceRoll = Character.Defaults.armor + 1;
 
-            var enemy = new Enemy();
+            var successfulHit = defender.DefendAgainst(diceRoll);
 
-            bool attackSuccess = actions.Result > enemy.armorClass;
+            Assert.IsTrue(successfulHit);
+        }
 
-            Assert.IsTrue(attackSuccess);
+        [TestMethod]
+        public void IfAttackRollIsLowerThanArmorClassTheAttackFailed()
+        {
+            var defender = new Character("Defender");
+            var diceRoll = Character.Defaults.armor - 1;
+
+            var successfulHit = defender.DefendAgainst(diceRoll);
+
+            Assert.IsFalse(successfulHit);
+        }
+
+        [TestMethod]
+        public void DiceRollOf20AlwaysHitsRegardlessOfArmour()
+        {
+            var defender = new Character("Defender")
+            {
+                armorClass = 21,
+            };
+
+            var diceRoll = 20;
+
+            var successfulHit = defender.DefendAgainst(diceRoll);
+
+            Assert.IsTrue(successfulHit);
         }
     }
 }
