@@ -5,12 +5,19 @@ namespace EverTests
     [TestClass]
     public class AttackDamageTests
     {
+        private Character defender;
+        private Character attacker;
+
+        [TestInitialize]
+        public void SetupCharacters()
+        {
+            defender = new Character("Defender");
+            attacker = new Character("Attacker");
+        }
+
         [TestMethod]
         public void SuccessfulAttachDeals1PointOfDamageToDefender()
         {
-            var defender = new Character("Defender");
-            var attacker = new Character("Attacker");
-
             var diceRoll = 19;
 
             attacker.Attack(defender, diceRoll);
@@ -21,9 +28,6 @@ namespace EverTests
         [TestMethod]
         public void CriticalHitDealsDoubleDamage()
         {
-            var defender = new Character("Defender");
-            var attacker = new Character("Attacker");
-
             var diceRoll = 20;
 
             attacker.Attack(defender, diceRoll);
@@ -34,9 +38,7 @@ namespace EverTests
         [TestMethod]
         public void DefenderDiesWhenHitPointsGoesToZero()
         {
-            var defender = new Character("Defender"){hitPoints = 1};
-            var attacker = new Character("Attacker");
-
+            defender.hitPoints = 1;
             var diceRoll = Character.Defaults.armor +1;
 
             attacker.Attack(defender, diceRoll);
@@ -47,9 +49,7 @@ namespace EverTests
         [TestMethod]
         public void DefenderDiesWhenHitPointsGoesBelowZero()
         {
-            var defender = new Character("Defender") { hitPoints = 1 };
-            var attacker = new Character("Attacker");
-
+            defender.hitPoints = 1;
             var diceRoll = 20;
 
             attacker.Attack(defender, diceRoll);
