@@ -6,7 +6,7 @@ namespace EverCraft
     {
         static void Main(string[] args)
         {
-            var character = new Character();
+            var character = new Character("Franko");
             var enemy = new Enemy();
 
             var displayMenu = true;

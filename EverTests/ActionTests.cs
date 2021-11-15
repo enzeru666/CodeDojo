@@ -17,7 +17,6 @@ namespace EverTests
             bool attackSuccess = actions.Result > enemy.armorClass;
 
             Assert.IsTrue(attackSuccess);
-
         }
     }
 }
