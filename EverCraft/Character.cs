@@ -30,7 +30,7 @@ public class Character
             return HitType.Miss;
     }
 
-    public void Attack(Character defender, int diceRoll)
+    public HitType Attack(Character defender, int diceRoll)
     {
         var hitResult = defender.DefendAgainst(diceRoll);
         if (hitResult == HitType.Success)
@@ -47,6 +47,8 @@ public class Character
         {
             defender.IsDead = true;
         }
+
+        return hitResult;
     }
 }
 
