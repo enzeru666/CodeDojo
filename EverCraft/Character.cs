@@ -19,8 +19,35 @@ public class Character
         Name = name;
     }
 
-    public bool DefendAgainst(int diceRoll) =>
-        diceRoll == 20 || (diceRoll > armorClass);
+    public HitType DefendAgainst(int diceRoll)
+    {
+        if (diceRoll == 20)
+            return HitType.Critical;
+        if (diceRoll > armorClass)
+            return HitType.Success;
+        else
+            return HitType.Miss;
+    }
+
+    public void Attack(Character defender, int diceRoll)
+    {
+        var hitResult = defender.DefendAgainst(diceRoll);
+        if (hitResult == HitType.Success)
+        {
+            defender.hitPoints -= 1;
+        }
+        if (hitResult == HitType.Critical)
+        {
+            defender.hitPoints -= 2;
+        }
+    }
+}
+
+public enum HitType
+{
+    Miss,
+    Success,
+    Critical,
 }
 
 public enum Alignment

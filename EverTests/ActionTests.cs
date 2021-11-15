@@ -12,9 +12,9 @@ namespace EverTests
             var defender = new Character("Defender");
             var diceRoll = Character.Defaults.armor + 1;
 
-            var successfulHit = defender.DefendAgainst(diceRoll);
+            var hitResult = defender.DefendAgainst(diceRoll);
 
-            Assert.IsTrue(successfulHit);
+            Assert.AreEqual(HitType.Success, hitResult);
         }
 
         [TestMethod]
@@ -23,9 +23,9 @@ namespace EverTests
             var defender = new Character("Defender");
             var diceRoll = Character.Defaults.armor - 1;
 
-            var successfulHit = defender.DefendAgainst(diceRoll);
+            var hitResult = defender.DefendAgainst(diceRoll);
 
-            Assert.IsFalse(successfulHit);
+            Assert.AreEqual(HitType.Miss, hitResult);
         }
 
         [TestMethod]
@@ -38,9 +38,9 @@ namespace EverTests
 
             var diceRoll = 20;
 
-            var successfulHit = defender.DefendAgainst(diceRoll);
+            var hitResult = defender.DefendAgainst(diceRoll);
 
-            Assert.IsTrue(successfulHit);
+            Assert.AreEqual(HitType.Critical, hitResult);
         }
     }
 }
