@@ -13,6 +13,7 @@ public class Character
 	
     public string Name { get; set; }
     public Alignment Alignment { get; set; } = Alignment.Neutral;
+    public bool IsDead { get; set; }
 
     public Character(string name)
     {
@@ -36,9 +37,15 @@ public class Character
         {
             defender.hitPoints -= 1;
         }
+
         if (hitResult == HitType.Critical)
         {
             defender.hitPoints -= 2;
+        }
+
+        if (defender.hitPoints <= 0)
+        {
+            defender.IsDead = true;
         }
     }
 }
