@@ -22,5 +22,9 @@ namespace EverTests
         [TestMethod]
         public void StartsWithDefaultArmourPoints() => 
             Assert.AreEqual(10, character.armorClass);
+        
+        [TestMethod]
+        public void AlignmentDefaultsToNeutral() =>
+            Assert.AreEqual(Alignment.Neutral, character.Alignment);
     }
 }
