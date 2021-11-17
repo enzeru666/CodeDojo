@@ -5,20 +5,30 @@ namespace EverTests
     [TestClass]
     public class CharacterTests
     {
-        [TestMethod]
-        public void ConfirmDefaultHitPoints()
-        {
-            var character = new Character();
+        private Character character;
 
-            Assert.AreEqual(character.hitPoints, 5);
-        }
+        [TestInitialize]
+        public void Setup() => 
+            character = new Character("Franko");
 
         [TestMethod]
-        public void ConfirmDefaultArmorClass()
-        {
-            var character = new Character();
+        public void CharacterMustHaveAName() => 
+            Assert.AreEqual("Franko", character.Name);
 
-            Assert.AreEqual(character.armorClass, 10);
-        }
+        [TestMethod]
+        public void StartsWithDefaultHitPoints() => 
+            Assert.AreEqual(5, character.hitPoints);
+
+        [TestMethod]
+        public void StartsWithDefaultArmourPoints() => 
+            Assert.AreEqual(10, character.armorClass);
+        
+        [TestMethod]
+        public void AlignmentDefaultsToNeutral() => 
+            Assert.AreEqual(Alignment.Neutral, character.Alignment);
+
+        [TestMethod]
+        public void AlignmentMayBeChanged() => 
+            Assert.AreEqual(Alignment.Evil, character.Alignment = Alignment.Evil);
     }
 }
